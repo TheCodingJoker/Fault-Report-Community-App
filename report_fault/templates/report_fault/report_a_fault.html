@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Report a Fault</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&amp;family=Lexend:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#003991",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-dim": "#55506b",
+                        "surface-container-low": "#f6f3f4",
+                        "on-background": "#323235",
+                        "on-tertiary": "#fcf7ff",
+                        "on-surface-variant": "#5f5f61",
+                        "on-tertiary-fixed": "#3f3a54",
+                        "tertiary-fixed": "#e3dbfd",
+                        "surface": "#fcf8f9",
+                        "on-error": "#fff7f6",
+                        "surface-container": "#f0edef",
+                        "secondary-container": "#e4e2e6",
+                        "outline": "#7b7a7d",
+                        "secondary": "#5f5f62",
+                        "surface-tint": "#0056d2",
+                        "inverse-on-surface": "#9e9c9d",
+                        "on-secondary": "#faf8fc",
+                        "primary": "#0056d2",
+                        "on-surface": "#323235",
+                        "secondary-fixed-dim": "#d5d4d8",
+                        "tertiary": "#615b77",
+                        "on-error-container": "#752121",
+                        "outline-variant": "#b3b1b4",
+                        "inverse-primary": "#5b8cff",
+                        "primary-fixed-dim": "#c6d3ff",
+                        "on-tertiary-fixed-variant": "#5b5672",
+                        "error": "#9f403d",
+                        "background": "#fcf8f9",
+                        "surface-container-highest": "#e4e2e5",
+                        "inverse-surface": "#0e0e0f",
+                        "surface-variant": "#e4e2e5",
+                        "error-container": "#fe8983",
+                        "on-secondary-container": "#515155",
+                        "on-primary-fixed-variant": "#0053cc",
+                        "primary-dim": "#004bb9",
+                        "on-primary": "#f8f7ff",
+                        "tertiary-fixed-dim": "#d5cdee",
+                        "secondary-fixed": "#e4e2e6",
+                        "on-secondary-fixed": "#3f3f43",
+                        "on-primary-container": "#004ab7",
+                        "on-tertiary-container": "#524c68",
+                        "surface-container-high": "#eae7ea",
+                        "primary-fixed": "#dae2ff",
+                        "on-secondary-fixed-variant": "#5b5b5f",
+                        "tertiary-container": "#e3dbfd",
+                        "surface-bright": "#fcf8f9",
+                        "surface-dim": "#dbd9dd",
+                        "secondary-dim": "#535356",
+                        "primary-container": "#dae2ff",
+                        "error-dim": "#4e0309"
+                    },
+                    fontFamily: {
+                        "headline": ["Public Sans"],
+                        "body": ["Lexend"],
+                        "label": ["Lexend"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf8f9] dark:bg-[#1c1b1f] opacity-80 backdrop-blur-xl flex items-center h-16 px-6 w-full shadow-none">
+<div class="flex items-center gap-4">
+<a class="text-[#0056d2] dark:text-[#d3e3ff] hover:bg-[#f0edef] dark:hover:bg-[#49454f] transition-colors p-2 rounded-full active:scale-95 duration-200 inline-flex" href="{% url 'dashboard:home' %}">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</a>
+<h1 class="font-['Public_Sans'] font-bold text-[1.75rem] leading-tight text-[#323235] dark:text-[#e6e1e5]">Report a Fault</h1>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-md mx-auto space-y-8">
+<!-- Type of Fault Section -->
+<section>
+<h2 class="font-headline font-bold text-on-surface-variant mb-4 ml-1">Type of Fault</h2>
+<div class="flex overflow-x-auto gap-3 pb-2 hide-scrollbar">
+<!-- Electricity -->
+<button class="flex-shrink-0 flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-xl bg-surface-container-lowest flex items-center justify-center border border-outline-variant/15 group-active:scale-95 transition-transform shadow-[0px_2px_8px_rgba(50,50,53,0.04)]">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="bolt">bolt</span>
+</div>
+<span class="text-[10px] font-medium text-on-surface-variant">Electricity</span>
+</button>
+<!-- Water -->
+<button class="flex-shrink-0 flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-xl bg-surface-container-lowest flex items-center justify-center border border-outline-variant/15 group-active:scale-95 transition-transform shadow-[0px_2px_8px_rgba(50,50,53,0.04)]">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="water_drop">water_drop</span>
+</div>
+<span class="text-[10px] font-medium text-on-surface-variant">Water</span>
+</button>
+<!-- Road -->
+<button class="flex-shrink-0 flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-xl bg-surface-container-lowest flex items-center justify-center border border-outline-variant/15 group-active:scale-95 transition-transform shadow-[0px_2px_8px_rgba(50,50,53,0.04)]">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="add_road">add_road</span>
+</div>
+<span class="text-[10px] font-medium text-on-surface-variant">Road</span>
+</button>
+<!-- Waste -->
+<button class="flex-shrink-0 flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-xl bg-surface-container-lowest flex items-center justify-center border border-outline-variant/15 group-active:scale-95 transition-transform shadow-[0px_2px_8px_rgba(50,50,53,0.04)]">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="delete">delete</span>
+</div>
+<span class="text-[10px] font-medium text-on-surface-variant">Waste</span>
+</button>
+<!-- Other -->
+<button class="flex-shrink-0 flex flex-col items-center gap-2 group">
+<div class="w-16 h-16 rounded-xl bg-surface-container-lowest flex items-center justify-center border border-outline-variant/15 group-active:scale-95 transition-transform shadow-[0px_2px_8px_rgba(50,50,53,0.04)]">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="more_horiz">more_horiz</span>
+</div>
+<span class="text-[10px] font-medium text-on-surface-variant">Other</span>
+</button>
+</div>
+</section>
+<!-- Picture Upload Section -->
+<section>
+<h2 class="font-headline font-bold text-on-surface-variant mb-4 ml-1">Visual Evidence</h2>
+<div class="relative group cursor-pointer border-2 border-dashed border-outline-variant/40 rounded-xl p-10 bg-surface-container-low flex flex-col items-center justify-center text-center transition-colors hover:bg-surface-container-high active:scale-[0.98]">
+<div class="relative mb-3">
+<span class="material-symbols-outlined text-on-surface-variant text-[48px]" data-icon="photo_camera">photo_camera</span>
+<div class="absolute -top-1 -right-1 bg-primary text-on-primary rounded-full w-6 h-6 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</div>
+</div>
+<p class="font-semibold text-on-surface">Capture or upload photo</p>
+<p class="text-sm text-on-surface-variant mt-1">(Optional)</p>
+</div>
+</section>
+<!-- Location Section -->
+<section class="space-y-4">
+<h2 class="font-headline font-bold text-on-surface-variant ml-1">Location Details</h2>
+<div class="flex gap-3">
+<div class="flex-grow relative">
+<select class="w-full h-14 pl-4 pr-10 appearance-none bg-surface-container-high rounded-xl text-on-surface font-medium border-none focus:ring-2 focus:ring-primary/20">
+<option>Select neighborhood or street</option>
+<option>Main Street, Downtown</option>
+<option>Oak Avenue, Residential</option>
+<option>Industrial Park, East</option>
+</select>
+</div>
+<button class="h-14 w-14 bg-primary text-on-primary rounded-xl flex items-center justify-center shadow-lg active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</button>
+</div>
+<div class="w-full h-40 rounded-xl overflow-hidden shadow-inner bg-surface-container-highest">
+<img class="w-full h-full object-cover grayscale opacity-80" data-alt="clean minimal map preview showing neighborhood streets with a single blue location pin marker in a high contrast civic style" data-location="Cape Town" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAXvNMgA_TQsTrTMhQM9BCk2G4P66q8rGI3uqBpN7NhEyHnt3ApxTaWjpLXryDGEQj-jwUZ6WXEv5lyZeevsfViny2dxYlGjJ7HmDUUMH84_7YCfErEd4Vyi4S7N8OzedKM5xczfmBdFihW-7aZrBHihP7k5IdmOshDlB3FOXgQKGtuLdzL84QTFOFIMZXXywsKy79s2OBWXn31QSwBZLu45-leug2zvWZ4FDsqgEVV5faOLll1W9pZzq5gFn-W08r4j95oaSFUVCi"/>
+</div>
+</section>
+<!-- Fault Description Section -->
+<section>
+<h2 class="font-headline font-bold text-on-surface-variant mb-4 ml-1">Fault Description</h2>
+<textarea class="w-full min-h-[140px] p-5 rounded-xl bg-surface-container-high border-none text-on-surface placeholder:text-on-surface-variant/60 focus:ring-2 focus:ring-primary/20" placeholder="Please describe the issue in detail..."></textarea>
+</section>
+<!-- Submit Button -->
+<button class="w-full h-16 bg-gradient-to-r from-primary to-primary-dim text-on-primary rounded-xl font-bold flex items-center justify-center gap-3 shadow-xl active:scale-[0.97] transition-all hover:brightness-105">
+<span class="text-lg">Submit Report</span>
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</main>
+</body></html>
