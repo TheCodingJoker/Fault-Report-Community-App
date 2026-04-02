@@ -126,12 +126,12 @@
 <main class="pt-24 pb-8 px-6 max-w-4xl mx-auto space-y-8">
 <!-- Quick Actions: Asymmetric Cards -->
 <section class="grid grid-cols-2 gap-4">
-<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_24px_rgba(50,50,53,0.04)] flex flex-col items-center justify-center gap-4 aspect-square md:aspect-auto md:h-48 group hover:bg-primary-container transition-colors duration-300">
+<button type="button" class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_24px_rgba(50,50,53,0.04)] flex flex-col items-center justify-center gap-4 aspect-square md:aspect-auto md:h-48 group hover:bg-primary-container transition-colors duration-300 active:scale-95 transition-transform">
 <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-white transition-colors">
 <span class="material-symbols-outlined text-[32px]">list_alt</span>
 </div>
 <span class="font-label font-semibold text-on-surface text-center">My Reports</span>
-</div>
+</button>
 <a href="{% url 'report_fault:report' %}" class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_24px_rgba(50,50,53,0.04)] flex flex-col items-center justify-center gap-4 aspect-square md:aspect-auto md:h-48 group hover:bg-primary-container transition-colors duration-300">
 <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-white transition-colors">
 <span class="material-symbols-outlined text-[32px]">assignment_add</span>
